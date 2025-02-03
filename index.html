@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>5th Monthsary</title>
+</head>
+<body>
+    <div class="main">
+        <div class="valentines_card">
+            <div class="front_card">
+                <img src="couple.png" class="front_img">
+                <div class="front_text">
+                    <p>hover to open ♡</p>
+                </div>
+            </div>
+            <div class="inside_card">
+                <img src="Moon_Transparent_PNG_Clip_Art-639687983.png" class="inside_img">
+                <div>
+                    <audio id="myAudio" allow="autoplay" controls>
+                        <source src="moonlight_over_paris.mp3" allow="autoplay" type="audio/mp3" >
+                    </audio>  
+                </div>
+                <div class="inside_text">
+                    <h1>Happy 5th Monthsary Mylove</h1>
+                    <h3>Hi my love, grabe ang nangyari sa atin this month no? nagkaroon tayo ng hindi pagkakaunawaan but still eto tayo pang 5th monthsary na natin, grabe no sinusubok talaga tayo ni Lord, I know na marami pang challenges ang mga posibleng dumating sa atin pero alam ko naman na malalagpasan din natin yun, kahit dumating na sa punto na hindi malinaw sa atin ang mga bagay bagay, sana mas piliin parin natin ang isa't isa. Tandaan mo lagi na nandito ako palagi para sayo, susuportahan ka sa lahat ng bagay at mahal na mahal na mahal kita palagi. I love you so much mylove.</h3>
+                    <a href="#galleryContainer">click this</a>
+                </div>
+            </div>
+    
+        </div>
+        <div class="gallery_container" id="galleryContainer">
+            <div class="gallery">
+               
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const gallery = document.querySelector(".gallery");
+
+    const images = [
+        {
+            url: "images/2025-02-03 19.10.24.jpg",
+        },
+        {
+            url: "images/2025-02-03 19.11.01.jpg",
+        },
+        {
+            url: "images/2025-02-03 19.10.56.jpg",
+        },
+        {
+            url: "images/2025-02-03 19.11.04.jpg",
+        },
+        {
+            url: "images/2025-02-03 19.11.12.jpg",
+        },
+        {
+            url: "images/2025-02-03 19.11.16.jpg",
+        },
+        {
+            url: "images/2025-02-03 19.11.21.jpg",
+        },
+        {
+            url: "images/2025-02-03 19.11.25.jpg",
+        },
+        {
+            url: "images/2025-02-03 19.11.29.jpg",
+        },
+        {
+            url: "images/2025-02-03 19.11.33.jpg",
+        },
+        {
+            url: "images/2025-02-03 19.11.45.jpg",
+        },
+        {
+            url: "images/2025-02-03 19.11.49.jpg",
+        },
+        {
+            url: "images/2025-02-03 19.11.57.jpg",
+        },
+        {
+            url: "images/2025-02-03 19.12.00.jpg",
+        },
+        {
+            url: "images/2025-02-03 19.12.03.jpg",
+        },
+        {
+            url: "images/2025-02-03 19.11.52.jpg",
+        },
+    ];
+
+    images.forEach((image) => {
+        const galleryItem = `
+            <div  class="gallery__link">
+                <figure class="gallery__thumb">
+                    <img src="${image.url}" alt="Portrait by ${image.photographer}" class="gallery__image">
+                </figure>
+            </div>
+        `;
+        gallery.insertAdjacentHTML("beforeend", galleryItem);
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+        const audio = document.getElementById("myAudio");
+        audio.play().catch(error => console.log("Autoplay blocked:", error));
+    });
+    </script>
+</html>
